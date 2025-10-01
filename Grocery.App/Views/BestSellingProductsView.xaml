@@ -25,9 +25,10 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Text="Stock" Grid.Column="0" FontAttributes="Bold"/>
-                    <Label Text="NrofSells" Grid.Column="1" FontAttributes="Bold"/>
-                    <Label Text="Ranking" Grid.Column="2" FontAttributes="Bold"/>
+                    <Label Text="Name" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="Stock" Grid.Column="1" FontAttributes="Bold"/>
+                    <Label Text="NrofSells" Grid.Column="2" FontAttributes="Bold"/>
+                    <Label Text="Ranking" Grid.Column="3" FontAttributes="Bold"/>
                 </Grid>
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
