@@ -51,7 +51,13 @@ namespace Grocery.Core.Services
 
         public List<BestSellingProducts> GetBestSellingProducts(int topX = 5)
         {
-            throw new NotImplementedException();
+            List<BestSellingProducts> bestSellingProducts = _productRepository.GetAll()
+                .Select(p => new BestSellingProducts(p.Id, p.Name, p.Stock, _groceriesRepository.GetAll().Count(g => g.ProductId == p.Id), 0))
+                .OrderByDescending(b => b.NrOfSells)
+                .Take(topX)
+                .ToList();
+
+            return bestSellingProducts;
         }
 
         private void FillService(List<GroceryListItem> groceryListItems)
